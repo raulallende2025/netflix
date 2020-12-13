@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Netflix";
-  src: url("../../fonts/AvenirNextLTPro-Regular.otfs");
+  src: url("../../fonts/AvenirNextLTPro-Regular.otf");
   font-weight: 400;
   font-style: normal;
 }
@@ -26,7 +26,7 @@
 }
 
 body {
-  background-color: black;
+  background: black;
   color: white;
   margin: 0;
   font-family: "Netflix";
@@ -67,19 +67,23 @@ a {
 .featured {
   margin-top: -80px;
   position: relative;
+  overflow: hidden;
 }
 
 .featured-details {
-  border: 1px solid red;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: linear-gradient(to top, black 0%, transparent 100%);
+  background-image: linear-gradient(
+    to top,
+    black 0%,
+    black 40%,
+    transparent 100%
+  );
 }
 
 .tags {
-  border: 1px solid yellow;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -92,7 +96,7 @@ a {
 }
 
 .tag::before {
-  content: ".";
+  content: "•";
   margin-right: 10px;
   position: relative;
   top: 2px;
@@ -110,9 +114,84 @@ a {
 }
 
 .button {
-  border: 1px solid red;
+  border: none;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 1em 2px 0.5em;
+  border-radius: 3px;
+}
+
+.button::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
 }
 
 .button-secondary {
-  border: 1px solid blue;
+  background: none;
+  color: white;
+  font-size: 1.1em;
+  min-width: 100px;
+  cursor: pointer;
+  border: none;
+}
+
+.button-secondary::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.icon-plus::before {
+  background: url("../../images/icons/plus.svg");
+}
+
+.icon-play::before {
+  background: url("../../images/icons/play.svg");
+}
+
+.icon-info::before {
+  background: url("../../images/icons/info.svg");
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+
+.list-content {
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.list-item {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.list-item:first-child {
+  margin: 0;
+}
+
+.list {
+  padding: 0 1em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tab-list {
+  border: 1px solid green;
 }
