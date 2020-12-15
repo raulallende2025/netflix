@@ -1,6 +1,6 @@
 # Recreando Netflix
 
-**Diseñado con 💗 por [leonidasesteban.com](https://leonidasesteban.com/)**
+**Diseñado por Raul Allende**
 
 ### Colores
 
